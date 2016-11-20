@@ -20431,7 +20431,7 @@ module.exports = require('./lib/React');
 var React = require('react');
 var ListItem = require('./ListItem.jsx');
 
-var ingredients = [{ "id": 1, "text": "ham" }, { "id": 2, "text": "cheese" }, { "id": 3, "text": "potatoes" }];
+var ingredients = [{ "id": 1, "text": "ham" }, { "id": 2, "text": "cheese" }, { "id": 3, "text": "chips" }];
 
 var List = React.createClass({
     displayName: 'List',
@@ -20452,26 +20452,26 @@ var List = React.createClass({
 module.exports = List;
 
 },{"./ListItem.jsx":179,"react":177}],179:[function(require,module,exports){
-var React = request('react');
+var React = require('react');
 var ListItem = React.createClass({
-  displayName: 'ListItem',
+    displayName: 'ListItem',
 
-  render: function () {
-    return React.createElement(
-      'li',
-      null,
-      React.createElement(
-        'h4',
-        null,
-        this.props.ingredient
-      )
-    );
-  }
+    render: function () {
+        return React.createElement(
+            'li',
+            null,
+            React.createElement(
+                'h4',
+                null,
+                this.props.ingredient
+            )
+        );
+    }
 });
 
 module.exports = ListItem;
 
-},{}],180:[function(require,module,exports){
+},{"react":177}],180:[function(require,module,exports){
 var React = require('react');
 var ReactDOM = require('react-dom');
 var List = require('./components/List.jsx');
